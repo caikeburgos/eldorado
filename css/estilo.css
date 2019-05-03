@@ -1,0 +1,38 @@
+#div1 h1, #div2 h1{
+	color: blue;
+}
+
+table td, th{
+	border: 1px solid;
+}
+
+/*#cabecalho, #corpo, #rodape{
+	border: 2px solid #000;
+	margin: 10px;
+	padding: 10px;
+}
+
+#corpo{
+	min-height: 100px;
+}*/
+
+.menu{
+	list-style-type: none;
+	float: right;
+}
+
+.menu li{
+	margin: 10px;
+	float: left;
+}
+
+#rodape{
+	margin-top: 50px;
+	text-align: center;
+}
+
+#menu .jumbotron{
+	background: url('../img/capa.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
