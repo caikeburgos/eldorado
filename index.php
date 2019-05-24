@@ -1,5 +1,7 @@
 <?php
 
+require_once("config/conexao_bd.php");
+
 if(isset($_GET["pg"])){
 	$pagina = $_GET["pg"];
 }
@@ -12,7 +14,7 @@ else{
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Projeto 2019</title>
+		<title>OAT</title>
 		<meta charset="utf-8">
 
 		<link rel="stylesheet" href="./css/bootstrap_css/bootstrap.min.css">
@@ -41,6 +43,9 @@ else{
 			<li><a class="btn btn <?= ($pagina == 'sobre')?'btn-primary':'btn-outline-primary' ?>" role="button" href="?pg=sobre">Sobre</a></li>
 
 			<li><a class="btn <?= ($pagina == 'cadastro')?'btn-primary':'btn-outline-primary' ?>" role="button" href="?pg=cadastro">Receber Novidades</a></li>
+
+			<li><a class="btn <?= ($pagina == 'listagem')?'btn-primary':'btn-outline-primary' ?>" role="button" href="?pg=listagem">Listagem</a></li>
+
 		</ul>
 	</div>
 	</div>

@@ -1,18 +1,18 @@
 <?php
 
 $email = $_POST["email"];
-$senha = $_POST["senha"];
+$nome = $_POST["nome"];
+$telefone = $_POST["telefone"];
 
-if ($email == "teste@teste.com" && $senha == "123") {
+$sql = "INSERT INTO dados_user (nome, email, telefone) VALUES ('$nome', '$email', '$telefone')";
 
-	echo '<div class="alert alert-success" role="alert"> Sucesso!</div>';
+$query = mysqli_query($link, $sql);
+
+if ($query === TRUE) {
+
+	echo '<div class="alert alert-success" role="alert">Cadastro Realizado!</div>';	
 
 }else{
-	echo '<div class="alert alert-danger" role="alert">Falhou</div>';
+	echo '<div class="alert alert-danger" role="alert">Opa! Você esqueceu de alguma coisa. Formulário incompleto.</div>';
 }
-
-echo $email;
-echo "<br>";
-echo $senha;
-
 ?>
