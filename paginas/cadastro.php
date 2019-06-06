@@ -1,3 +1,28 @@
+<?php
+
+$actionEditar = "";
+$id_user = 0;
+$email = NULL;
+$nome = NULL;
+$telefone = NULL;
+
+if (isset($_GET["editar"])) {
+	$id_user = $_GET["editar"];
+	$sql = "SELECT * FROM dados_user WHERE id_user = $id_user";
+	$query = mysqli_query($link, $sql);
+	if($row = mysqli_fetch_assoc($query)){
+		$email = $row["email"];
+		$nome = $row["nome"];
+		$telefone = $row["telefone"];
+	}
+	else{
+		echo "Falha ao carregar registro!";
+	}
+	$actionEditar = "&editar=$id_user";
+}
+
+?>
+
 <h2>Receber Novidades</h2>
 
 <div class="row">
@@ -7,7 +32,7 @@
 	
     <div class="col-md-6">
 
-		<form action="?pg=processar" method="POST">
+		<form action="?pg=processar<?= $actionEditar ?>" method="POST">
 
 		<div class="form-group">
 			<label for="exampleInputEmail1">E-mail</label>

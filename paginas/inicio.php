@@ -19,7 +19,7 @@
 				<div class="card-body">
 		    	<h5 class="card-title">Facebook</h5>
 		    	<p class="card-text">Você será redirecionado à nossa página oficial no Facebook.</p>
-		    	<a href="http://facebook.com/eldoradocomunicacao" target="_blank" class="btn btn-primary">Acessar</a>
+		    	<a href="http://facebook.com/El-Dorado-Comunica%C3%A7%C3%A3o-2211181419099424/" target="_blank" class="btn btn-primary">Acessar</a>
 				</div>
     	</div>
 	</div>

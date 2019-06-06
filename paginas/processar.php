@@ -1,10 +1,16 @@
 <?php
 
-$email = $_POST["email"];
-$nome = $_POST["nome"];
+$nome = $_POST["email"];
+$email = $_POST["nome"];
 $telefone = $_POST["telefone"];
 
-$sql = "INSERT INTO dados_user (nome, email, telefone) VALUES ('$nome', '$email', '$telefone')";
+if(isset($_GET["editar"]) && $_GET["editar"] != 0){
+	$id = $_GET["editar"];
+	$sql = "UPDATE dados_user SET email='$email', nome='$nome', telefone='$telefone' WHERE id_user = $id_user";
+}
+else{
+	$sql = "INSERT INTO dados_user (email, nome, telefone) VALUES ('$email', '$nome', '$telefone')";
+}
 
 $query = mysqli_query($link, $sql);
 
@@ -15,4 +21,5 @@ if ($query === TRUE) {
 }else{
 	echo '<div class="alert alert-danger" role="alert">Opa! Você esqueceu de alguma coisa. Formulário incompleto.</div>';
 }
+
 ?>
