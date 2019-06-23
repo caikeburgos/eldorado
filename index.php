@@ -1,14 +1,5 @@
 <?php
-
 require_once("config/conexao_bd.php");
-
-if(isset($_GET["pg"])){
-	$pagina = $_GET["pg"];
-}
-else{
-	$pagina = "inicio";
-}	
-
 ?>
 
 <!DOCTYPE html>
@@ -22,57 +13,93 @@ else{
 		<script src="./js/jquery-3.3.1.slim.min.js" ></script>
 		<script src="./js/popper.min.js"></script>
 		<script src="./js/bootstrap_js/bootstrap.min.js"></script>
-
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
-
 		<script type="text/javascript" src="js/funcoes.js"></script>
+		<!-- Customização de fontes e icones -->
+	    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	   
+
 
 	</head>
 	<body>
-		<div class="container" id="menu">
+		 <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
+		        <a class="navbar-brand" href="#">Eldorado</a>
+		        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		          <span class="navbar-toggler-icon"></span>
+		        </button>
+		        <div class="collapse navbar-collapse" id="navbarCollapse">
+		          <ul class="navbar-nav mr-auto">
+		            <li class="nav-item active">
+		              <a class="nav-link" href="?pg=inicio">Início<span class="sr-only">(atual)</span></a>
+		            </li>		    
+		            <li class="nav-item">
+		              <a class="nav-link" href="?pg=login">Login</a>
+		            </li>		          
+		          </ul>
+		        </div>
+      		</nav>	
+		<!-- Header -->
+	  	<header class="masthead">
+	    	<div class="container">
+	        	<div class="intro-text">	        		
+	      		</div>
+	    	</div>
+	    </header>
 
-		<div class="jumbotron"><!-- 
-
-		<h1>Olá!</h1>
-
-		<p>El Dorado Comunicação</p> -->
-
-		<ul class="menu">
-			<li><a class="btn btn <?= ($pagina == 'inicio')?'btn-primary':'btn-outline-primary' ?>" role="button" href="?pg=inicio">Início</a></li>
-
-			<li><a class="btn btn <?= ($pagina == 'sobre')?'btn-primary':'btn-outline-primary' ?>" role="button" href="?pg=sobre">Sobre</a></li>
-
-			<li><a class="btn <?= ($pagina == 'cadastro')?'btn-primary':'btn-outline-primary' ?>" role="button" href="?pg=cadastro">Receber Novidades</a></li>
-
-			<li><a class="btn <?= ($pagina == 'listagem')?'btn-primary':'btn-outline-primary' ?>" role="button" href="?pg=listagem">Listagem</a></li>
-
-		</ul>
-	</div>
-	</div>
-
-	<div class="container" id="corpo">
-		<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item" aria-current="page"><a href="?pg=inicio">Início</a></li>
-			  </ol>
-			</nav>
-
+		<main role="main">
 			<?php
-			
+				if(isset($_GET["pg"])){
+					$pagina = $_GET["pg"];
+				}
+				else{
+					$pagina = "inicio";
+				}				
 				include("paginas/".$pagina.".php");
-
 			?>
-	</div>
+		</main>
 
-	<div class="container" id="rodape">
-
-	
-		<div class="col-md" >
-			<h6>Todos os direitos reservados.</h6>
-		
-		</div>
-	</div>
-
-
+		<!-- Footer -->
+		<footer class="footer">
+		    <div class="container">
+		    	<div class="row align-items-center">
+		    		<div class="col-md-4">
+		        		<span class="copyright">Copyright &copy; Your Website 2019</span>
+		        	</div>
+		        	<div class="col-md-4">
+		        		<ul class="list-inline social-buttons">
+			            	<li class="list-inline-item">
+			              		<a href="#">
+			                		<i class="fab fa-twitter"></i>
+			              		</a>
+			            	</li>
+			            	<li class="list-inline-item">
+			              		<a href="#">
+			                		<i class="fab fa-facebook-f"></i>
+			              		</a>
+			            	</li>
+			            	<li class="list-inline-item">
+			              		<a href="#">
+			              		  <i class="fab fa-linkedin-in"></i>
+			             		</a>
+			            	</li>
+		            	</ul>
+		        	</div>
+		       	 	<div class="col-md-4">
+		          		<ul class="list-inline quicklinks">
+		           			<li class="list-inline-item">
+		              			<a href="#">Privacy Policy</a>
+		            		</li>
+		            		<li class="list-inline-item">
+		              			<a href="#">Terms of Use</a>
+		            		</li>
+		          		</ul>
+		        	</div>
+		       </div>
+		    </div>
+		</footer>
 	</body>
 </html>

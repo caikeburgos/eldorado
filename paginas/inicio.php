@@ -1,38 +1,109 @@
-<h2>Página Inicial</h2>
-
-<div class="row">
-	
-    <div class="col-md">
-		<div class="card" style="width: 18rem; ">
-			<img class="card-img-top" src="./img/instagram.jpg" alt="Card image cap">
-				<div class="card-body">
-		    	<h5 class="card-title">Instagram</h5>
-		    	<p class="card-text">Você será redirecionado à nossa página oficial no Instagram.</p>
-		    	<a href="http://instagram.com/eldoradocomunicacao" target="_blank" class="btn btn-primary">Acessar</a>
-				</div>
-		</div>
-    </div>
-
-    <div class="col-md">
-      <div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="./img/facebook.jpg" alt="Card image cap">
-				<div class="card-body">
-		    	<h5 class="card-title">Facebook</h5>
-		    	<p class="card-text">Você será redirecionado à nossa página oficial no Facebook.</p>
-		    	<a href="http://facebook.com/El-Dorado-Comunica%C3%A7%C3%A3o-2211181419099424/" target="_blank" class="btn btn-primary">Acessar</a>
-				</div>
+   <!-- Services -->
+   <section class="page-section" id="services">
+		<div class="container">
+      		<div class="row">
+        		<div class="col-lg-12 text-center">
+         			<h2 class="section-heading text-uppercase">Serviçoss</h2>
+          			<h3 class="section-subheading text-muted">Aqui você encontra</h3>
+        		</div>
+      		</div>
+      		<div class="row text-center">
+        		<div class="col-md-4">
+          			<span class="fa-stack fa-4x">
+            			<i class="fas fa-circle fa-stack-2x text-primary"></i>
+            			<i class="fas fa-paint-brush fa-stack-1x fa-inverse"></i>
+          			</span>
+          			<h4 class="service-heading">Design</h4>
+          			<p class="text-muted">Oferecemos a você cliente edição de fotos e videos, além da criação de banners, logs, cartão de visita, desenvolvimento de artes criativas, dentre outros.</p>
+        		</div>
+        		<div class="col-md-4">
+          			<span class="fa-stack fa-4x">
+            			<i class="fas fa-circle fa-stack-2x text-primary"></i>
+            			<i class="fas fas fa-code fa-stack-1x fa-inverse"></i>
+          			</span>
+          			<h4 class="service-heading">Desenvolvimento Web</h4>
+          			<p class="text-muted">Nossa empresa lhe oferece o desenvolvimento de aplicações web e websites sob medida com redimencionamento responsivo de forma eficás e com baixo custo</p>
+        		</div>
+        		<div class="col-md-4">
+          			<span class="fa-stack fa-4x">
+            			<i class="fas fa-circle fa-stack-2x text-primary"></i>
+            			<i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+          			</span>
+      				<h4 class="service-heading">Web Security</h4>
+      				<p class="text-muted">Nossa instituição disponibiliza de consultorias empresariais de segurança da informação, mapeando vulnerabilidades, desenvolvendo politicas de segurança e MUITO MAIS.</p>
+        		</div>
+      		</div>
     	</div>
+  	</section>
+
+  	<!-- Sobre -->
+  	<section class="page-section" id="about">
+    	<div class="parallax">
+    		<div id="secundary-text">
+    			<div class="col-md-6 px-0">
+	            	<h1 class="display-4 font-italic">Sobre nós</h1>
+	              	<p class="lead my-3">Idealizada por Caike Burgos a instituição Eldorado é formada por uma equipe de 3 membros(Caike Burgos, Hérick Raposo, Kauê Siqueira e Rafael Reis), tendo enfoque no desenvolvimento web e design gráfico, entretanto oferece como parte de seus serviços consultoria empresarial em segurança da informação.</p>
+	        	</div>
+    		</div>
+      	</div>	    
+	</section>
+
+	<!-- PHP para inserção no banco de dados -->
+    <?php
+		$actionEditar = "";
+		$id = 0;
+		$nome = NULL;
+		$email = NULL;
+		$login = NULL;
+		$senha = NULL;
+
+		if (isset($_GET["editar"])) {
+			$id = $_GET["editar"];
+			$sql = "SELECT * FROM dados_user WHERE id = $id";
+			$query = mysqli_query($link, $sql);
+			if($row = mysqli_fetch_assoc($query)){
+				$nome = $row["nome"];
+				$email = $row["email"];
+				$login = $row["login"];
+				$senha = $row["senha"];
+			}
+			else{
+				echo "Falha ao carregar registro!";
+			}
+			$actionEditar = "&editar=$id";
+		}
+	?>
+
+	<!-- Cadastro -->
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+
+		<div class="col-md-6">
+
+			<form action="?pg=processar<?= $actionEditar ?>" method="POST">
+			<div class="form-group">
+			    <label for="inputNome">Nome</label>
+			    <input type="text" class="form-control" id="inputNome" name="nome" aria-describedby="emailHelp" placeholder="Digite seu nome" value="<?= $nome ?>">		    
+			</div>
+			<div class="form-group">
+			    <label for="exampleInputEmail1">Email</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail" value="<?= $email ?>">		    
+			</div>
+			<div class="form-group">
+			    <label for="inputLogin">Login</label>
+			    <input type="text" class="form-control" id="inputLogin" name="login" aria-describedby="nickname" placeholder="Digite seu nome de usuario" value="<?= $login ?>">		    
+			<
+			<div class="form-group">
+			    <label for="exampleInputPassword1">Senha</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Digite sua senha" value="<?= $senha ?>">
+			</div>			
+			<button type="submit" class="btn btn-primary">Enviar</button>
+			</form>
+
+		</div>
+
+		<div class="col-md-3">
+		</div>
 	</div>
 
-    <!-- <div class="col-md">
-      	<div class="card" style="width: 18rem;">
-			<img src="http://images6.fanpop.com/image/photos/37500000/Lana-Del-Rey-Ultraviolence-ultraviolence-37527852-1100-1100.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-		    	<h5 class="card-title">Card title</h5>
-		    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    	<a href="#" class="btn btn-primary">Go somewhere</a>
-				</div>
-    	</div>
-	</div> -->
-
-</div>
