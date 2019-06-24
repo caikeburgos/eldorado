@@ -1,6 +1,7 @@
 <?php
 	session_start();
-	include('verifica_login.php');
+	$usuario = $_SESSION['username'];
+
 ?>
 
 <!DOCTYPE html>
@@ -36,10 +37,7 @@
 		          <ul class="navbar-nav mr-auto">
 		          	<li class="nav-item">
 		          		<!-- Apresenta o login do usuario -->
-		              <a class="nav-link" href="?pg=login"><?php echo "$_SESSION['login']"; ?></a>
-		            </li>
-		            <li class="nav-item active">
-		              <a class="nav-link" href="?pg=inicio">Início<span class="sr-only">(atual)</span></a>
+		              <a class="nav-link" href="?pg=recepcao"><?php echo "$_SESSION['usuario']"; ?></a>
 		            </li>		  
 		            <li class="nav-item">
 		              <a class="nav-link" href="?pg=listagem">Listagem</a>
@@ -64,7 +62,7 @@
 					$pagina = $_GET["pg"];
 				}
 				else{
-					$pagina = "inicio";
+					$pagina = "recepcao";
 				}				
 				include("paginas/".$pagina.".php");
 			?>

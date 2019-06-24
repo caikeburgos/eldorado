@@ -1,26 +1,11 @@
-<?php
+usuario<?php
 	$actionEditar = "";
 	$id = 0;
 	$nome = NULL;
 	$email = NULL;
-	$login = NULL;
+	$usuario = NULL;
 	$senha = NULL;
 
-	if (isset($_GET["editar"])) {
-		$id = $_GET["editar"];
-		$sql = "SELECT * FROM dados_user WHERE id = $id";
-		$query = mysqli_query($link, $sql);
-		if($row = mysqli_fetch_assoc($query)){
-			$nome = $row["nome"];
-			$email = $row["email"];
-			$login = $row["login"];
-			$senha = $row["sennha"];
-		}
-		else{
-			echo "Falha ao carregar registro!";
-		}
-		$actionEditar = "&editar=$id";
-	}
 ?>
 
 <!-- Login -->
@@ -30,10 +15,10 @@
 
 		<div class="col-md-6">
 			<h1>Login</h1>
-			<form action="?pg=valida" method="POST">
+			<form action="?pg=valusuariomethod="POST">
 				<div class="form-group">
-				    <label for="inputLogin">Login</label>
-				    <input type="text" class="form-control" id="inputLogin" name="login" aria-describedby="nickname" placeholder="Digite seu nome de usuario" value="<?= $login ?>">		    
+				    <label for="inputUsuario">Usuario</label>
+				    <input type="text" class="form-control" id="inputUsuario" name="usuario" aria-describedby="usuario" placeholder="Digite seu nome de usuario" value="<?=$usuario?>">		    
 				</div>
 				<div class="form-group">
 				    <label for="exampleInputPassword1">Senha</label>
