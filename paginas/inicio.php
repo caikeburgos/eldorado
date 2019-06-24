@@ -54,7 +54,7 @@
 		$id = 0;
 		$nome = NULL;
 		$email = NULL;
-		$login = NULL;
+		$usuario = NULL;
 		$senha = NULL;
 
 		if (isset($_GET["editar"])) {
@@ -64,7 +64,7 @@
 			if($row = mysqli_fetch_assoc($query)){
 				$nome = $row["nome"];
 				$email = $row["email"];
-				$login = $row["login"];
+				$usuario = $row["usuario"];
 				$senha = $row["senha"];
 			}
 			else{
@@ -91,8 +91,8 @@
 			    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail" value="<?= $email ?>">		    
 			</div>
 			<div class="form-group">
-			    <label for="inputLogin">Login</label>
-			    <input type="text" class="form-control" id="inputLogin" name="login" aria-describedby="nickname" placeholder="Digite seu nome de usuario" value="<?= $login ?>">		    
+			    <label for="inputUsuario">Usuario</label>
+			    <input type="text" class="form-control" id="inputUsuario" name="usuario" aria-describedby="usuario" placeholder="Digite seu nome de usuario" value="<?= $usuario ?>">		    
 			<
 			<div class="form-group">
 			    <label for="exampleInputPassword1">Senha</label>
