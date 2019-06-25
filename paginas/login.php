@@ -16,8 +16,8 @@
 			<h1>Login</h1>
 			<form action="?pg=valida" method="POST">
 				<div class="form-group">
-				    <label for="inputUsuario">Usuário</label>
-				    <input type="text" class="form-control" id="inputUsuario" name="usuario" aria-describedby="usuario" placeholder="Digite seu nome de usuário" value="<?=$usuario?>">		    
+				    <label for="inputUsuario">Usuario</label>
+				    <input type="text" class="form-control" id="inputUsuario" name="usuario" aria-describedby="usuario" placeholder="Digite seu nome de usuario" value="<?=$usuario?>">		    
 				</div>
 				<div class="form-group">
 				    <label for="exampleInputPassword1">Senha</label>
