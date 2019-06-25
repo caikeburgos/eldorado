@@ -22,7 +22,7 @@
             			<i class="fas fas fa-code fa-stack-1x fa-inverse"></i>
           			</span>
           			<h4 class="service-heading">Desenvolvimento Web</h4>
-          			<p class="text-muted">Nossa empresa lhe oferece o desenvolvimento de aplicações web e websites sob medida com redimencionamento responsivo de forma eficás e com baixo custo.</p>
+          			<p class="text-muted">Nossa empresa lhe oferece o desenvolvimento de aplicações web e websites sob medida com redimencionamento responsivo de forma eficás e com baixo custo</p>
         		</div>
         		<div class="col-md-4">
           			<span class="fa-stack fa-4x">
@@ -42,7 +42,7 @@
     		<div id="secundary-text">
     			<div class="col-md-6 px-0">
 	            	<h1 class="display-4 font-italic">Sobre nós</h1>
-	              	<p class="lead my-3">Idealizada por Caike Burgos a instituição El Dorado é formada por uma equipe de 4 membros(Caike Burgos, Hérick Raposo, Kauê Siqueira e Rafael Reis), tendo enfoque no desenvolvimento web e design gráfico, entretanto, oferece como parte de seus serviços consultoria empresarial em segurança da informação.</p>
+	              	<p class="lead my-3">Idealizada por Caike Burgos a instituição Eldorado é formada por uma equipe de 3 membros(Caike Burgos, Hérick Raposo, Kauê Siqueira e Rafael Reis), tendo enfoque no desenvolvimento web e design gráfico, entretanto oferece como parte de seus serviços consultoria empresarial em segurança da informação.</p>
 	        	</div>
     		</div>
       	</div>	    
@@ -86,22 +86,18 @@
 			    <label for="inputNome">Nome</label>
 			    <input type="text" class="form-control" id="inputNome" name="nome" aria-describedby="emailHelp" placeholder="Digite seu nome" value="<?= $nome ?>">		    
 			</div>
-
 			<div class="form-group">
-			    <label for="exampleInputEmail1">E-mail</label>
+			    <label for="exampleInputEmail1">Email</label>
 			    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail" value="<?= $email ?>">		    
 			</div>
-
 			<div class="form-group">
-			    <label for="inputUsuario">Usuário</label>
-			    <input type="text" class="form-control" id="inputUsuario" name="usuario" aria-describedby="usuario" placeholder="Digite seu nome de usuário" value="<?= $usuario ?>">		    
+			    <label for="inputUsuario">Usuario</label>
+			    <input type="text" class="form-control" id="inputUsuario" name="usuario" aria-describedby="usuario" placeholder="Digite seu nome de usuario" value="<?= $usuario ?>">		    
 			</div>
-
 			<div class="form-group">
 			    <label for="exampleInputPassword1">Senha</label>
 			    <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Digite sua senha" value="<?= $senha ?>">
-			</div>	
-
+			</div>			
 			<button type="submit" class="btn btn-primary">Enviar</button>
 			</form>
 

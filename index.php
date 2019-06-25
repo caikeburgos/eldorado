@@ -27,7 +27,7 @@ require_once("config/conexao_bd.php");
 	</head>
 	<body>
 		 <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
-		        <a class="navbar-brand" href="#">El Dorado</a>
+		        <a class="navbar-brand" href="#">Eldorado</a>
 		        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 		          <span class="navbar-toggler-icon"></span>
 		        </button>
@@ -67,7 +67,7 @@ require_once("config/conexao_bd.php");
 		    <div class="container">
 		    	<div class="row align-items-center">
 		    		<div class="col-md-4">
-		        		<span class="copyright">Copyright &copy; El Dorado Comunicação, 2019</span>
+		        		<span class="copyright">Copyright &copy; Your Website 2019</span>
 		        	</div>
 		        	<div class="col-md-4">
 		        		<ul class="list-inline social-buttons">
