@@ -45,14 +45,13 @@
 		              <a class="nav-link"><?php echo $_SESSION['username']; ?></a>
 		            </li>
 		            <li class="nav-item active">
-		              <a class="nav-link" href="?pg=recepcao">Recepção<span class="sr-only">(atual)</span></a>
+		              <a class="nav-link" href="recepcao.php">Recepção<span class="sr-only">(atual)</span></a>
 		            </li>		  
 		            <li class="nav-item">
 		              <a class="nav-link" href="?pg=listagem">Listagem</a>
 		            </li>  
 		            <li class="nav-item">
-		              <a class="nav-link" href="paginas/logout.php">SAIR</a>
-		            usuario		            
+		              <a class="nav-link" href="paginas/logout.php">SAIR</a>            
 		          </ul>
 		        </div>
       		</nav>	
@@ -65,7 +64,7 @@
 	    </header>
 
 		<main role="main">
-			<h1>Bem vindo <?php echo $_SESSION['nome']; ?>!</h1>
+			<h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
 		</main>
 
 		<!-- Footer -->

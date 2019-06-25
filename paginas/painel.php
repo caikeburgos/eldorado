@@ -32,7 +32,7 @@
 	</head>
 	<body>
 		 <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
-		        <a class="navbar-brand" href="#">Eldorado</a>
+		        <a class="navbar-brand" href="#">El Dorado</a>
 		        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 		          <span class="navbar-toggler-icon"></span>
 		        </button>
@@ -49,8 +49,7 @@
 		              <a class="nav-link" href="?pgn=listagem">Listagem</a>
 		            </li>  
 		            <li class="nav-item">
-		              <a class="nav-link" href="?pgn=logout">SAIR</a>
-		            usuario		            
+		              <a class="nav-link" href="?pgn=logout">SAIR</a>	            
 		          </ul>
 		        </div>
       		</nav>	
