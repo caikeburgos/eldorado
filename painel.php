@@ -1,7 +1,9 @@
 <?php
 	session_start();
 
-	
+	if(empty($_SESSION['username'])){
+		header('location: index.php?erro=0');
+	}
 
 	$usuario = $_SESSION['username'];
 
@@ -43,13 +45,13 @@
 		              <a class="nav-link"><?php echo $_SESSION['username']; ?></a>
 		            </li>
 		            <li class="nav-item active">
-		              <a class="nav-link" href="?pgn=recepcao">Recepção<span class="sr-only">(atual)</span></a>
+		              <a class="nav-link" href="?pg=recepcao">Recepção<span class="sr-only">(atual)</span></a>
 		            </li>		  
 		            <li class="nav-item">
-		              <a class="nav-link" href="?pgn=listagem">Listagem</a>
+		              <a class="nav-link" href="?pg=listagem">Listagem</a>
 		            </li>  
 		            <li class="nav-item">
-		              <a class="nav-link" href="?pgn=logout">SAIR</a>
+		              <a class="nav-link" href="paginas/logout.php">SAIR</a>
 		            usuario		            
 		          </ul>
 		        </div>
@@ -63,15 +65,7 @@
 	    </header>
 
 		<main role="main">
-			<?php
-				if(isset($_GET["pgn"])){
-					$pages = $_GET["pgn"];
-				}
-				else{
-					$pages = "recepcao";
-				}				
-				include("paginas/".$pages.".php");
-			?>
+			<h1>Bem vindo <?php echo $_SESSION['nome']; ?>!</h1>
 		</main>
 
 		<!-- Footer -->

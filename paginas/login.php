@@ -1,11 +1,10 @@
-usuario<?php
+<?php
 	$actionEditar = "";
 	$id = 0;
 	$nome = NULL;
 	$email = NULL;
 	$usuario = NULL;
 	$senha = NULL;
-
 ?>
 
 <!-- Login -->
@@ -15,7 +14,7 @@ usuario<?php
 
 		<div class="col-md-6">
 			<h1>Login</h1>
-			<form action="?pg=valusuariomethod="POST">
+			<form action="?pg=valida" method="POST">
 				<div class="form-group">
 				    <label for="inputUsuario">Usuario</label>
 				    <input type="text" class="form-control" id="inputUsuario" name="usuario" aria-describedby="usuario" placeholder="Digite seu nome de usuario" value="<?=$usuario?>">		    
