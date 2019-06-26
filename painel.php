@@ -34,24 +34,28 @@
 	</head>
 	<body>
 		 <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
-		        <a class="navbar-brand" href="#">Eldorado</a>
+		        <a class="navbar-brand" href="#">El Dorado</a>
 		        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 		          <span class="navbar-toggler-icon"></span>
 		        </button>
 		        <div class="collapse navbar-collapse" id="navbarCollapse">
 		          <ul class="navbar-nav mr-auto">
-		          	<li class="nav-item">
-		          		<!-- Apresenta o login do usuario -->
-		              <a class="nav-link"><?php echo $_SESSION['username']; ?></a>
-		            </li>
-		            <li class="nav-item active">
-		              <a class="nav-link" href="?pg=recepcao">Recepção<span class="sr-only">(atual)</span></a>
-		            </li>		  
-		            <li class="nav-item">
-		              <a class="nav-link" href="?pg=listagem">Listagem</a>
-		            </li>  
-		            <li class="nav-item">
-		              <a class="nav-link" href="paginas/logout.php">SAIR</a>
+		          	
+		          		<li class="nav-item">
+		              	<a class="nav-link" href="painel.php">Início</a>
+		            	</li>
+
+		          		<li class="nav-item">
+		              	<a class="nav-link" href="?pg=recepcao">Notícias</a>
+		            	</li>
+		              <li class="nav-item dropdown">
+        				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          				<?php echo $_SESSION['nome']; ?>
+       					</a>
+        				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          				<a class="dropdown-item" href="paginas/logout.php">Sair</a>
+        				</div>
+      					</li>
 		          </ul>
 		        </div>
       		</nav>	
