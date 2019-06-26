@@ -1,6 +1,4 @@
-
-
-   <div class="col-lg-12 text-center">
+<div class="col-lg-12 text-center">
    	<br><br>
     <h2 class="section-heading text-uppercase">Oi, <?php echo $_SESSION['nome']; ?>!</h2><br><br>
     <h3 class="section-subheading text-muted">Aqui você pode verificar as últimas notícias da área de design e</h3>
